@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(145deg, #f5f0e6 0%, #f8f3e9 30%, #e6d7b8 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* superposition royale subtile */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.02) 0px, rgba(212, 175, 55, 0.02) 20px, rgba(255,255,240,0.2) 20px, rgba(255,255,240,0.2) 40px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.15);
+}
+
+.glass-card-intense {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 20px 40px -12px rgba(0, 20, 60, 0.25);
+}
+
+/* touches Real Madrid : blanc crème, or, bleu royal */
+.real-gold {
+    color: #c49b2b;
+}
+.real-gold-bg {
+    background: linear-gradient(145deg, #e9d28a, #c4a03b);
+}
+.real-royal {
+    color: #1f3a6b;
+}
+.real-royal-bg {
+    background: #1f3a6b;
+}
+
+.nav-item {
+    transition: all 0.2s ease;
+    color: #1f3a6b;
+    font-weight: 600;
+    background: rgba(255,255,240,0.5);
+}
+.nav-item:hover {
+    background: rgba(212, 175, 55, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(31, 58, 107, 0.15);
+}
+.active-tab {
+    background: linear-gradient(145deg, #1f3a6b, #142b4e);
+    color: white !important;
+    box-shadow: 0 6px 15px rgba(31,58,107,0.4);
+}
+
+@keyframes float {
+    0%,100%{ transform: translateY(0); }
+    50%{ transform: translateY(-15px); }
+}
+.animate-float { animation: float 5s ease-in-out infinite; }
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in { animation: fade-in 0.4s ease-out; }
+
+.crown-icon {
+    color: #c49b2b;
+    filter: drop-shadow(0 2px 4px rgba(196,155,43,0.3));
+}
+
+.install-prompt {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: rgba(31, 58, 107, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 12px 25px;
+    border-radius: 60px;
+    border: 1px solid #e9d28a;
+    color: white;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px -5px #1f3a6b;
+}
+.install-prompt:hover {
+    background: #1f3a6b;
+    transform: translateX(-50%) scale(1.03);
+}
+
+.lesson-content {
+    border-top: 1px solid rgba(212,175,55,0.2);
+}
